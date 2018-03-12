@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>布局容器</title>
+  <!-- 引入bootstrap的css文件 -->
+  <link rel="stylesheet" href="./lib/css/bootstrap.css">
+
+  <!-- 兼容html5 新标签的库-html5shiv.js   让低版本浏览器兼容媒体查询的库-respond.js -->
+  <!-- lt代表less than  小于 ie9  那一行代表的就是ie条件注释语句 之所以要用他是因为 html5新标签和媒体查询 在高级浏览器中不需要兼容的  这样做可以让高级浏览器少两个请求和两个文件  -->
+
+  <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.js"></script> 
+    <![endif]-->
+  <style>
+    header {
+      background-color: tomato;
+    }
+
+    [class^="col"] {
+      height: 40px;
+      box-shadow: 0 0 1px #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 栅格系统
+
+    小学  田字格: 行 列   如果行和列越大  写的字越大 越多
+
+
+
+      栅格: 类似于田字格  栅格越大 放的内容就越多  
+
+      怎么来控制栅格的大小呢
+
+        我们可以把栅格想象成div  能不能控制div的宽度  能不能控制div的高度呢?
+  -->
+
+
+  <!-- 布局容器-作业本 -->
+  <div class="container">
+    <!-- 栅格的行 -->
+    <!-- <div class="row"> -->
+    <!-- 栅格的列 
+            col 代表column
+
+            1代表 份数 (总份数 12) 
+            
+            也就是任何屏幕(大屏 普通屏  平板 手机)
+
+            lg代表的是大屏幕  屏幕宽度> 1200
+            md代表中屏幕    普通电脑 屏幕宽度 屏幕大于992
+            sm代表小屏幕     平板   屏幕宽度大于768
+            xs代表超小屏幕    手机  没有  只要小于768就是超小屏幕
+          -->
+    <!-- <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+      </div> -->
+    <!-- 
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-1"></div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2"></div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-3"></div>
+          <div class="col-lg-3"></div>
+          <div class="col-lg-3"></div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4"></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6"></div>
+      </div>
+       <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-7"></div>
+      </div> -->
+
+    <!-- 在不同的屏幕中显示不同的布局 -->
+    <!-- <div class="row">
+      <div class="col-lg-3  col-md-4 col-sm-6 col-xs-3">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+      </div>
+      <div class="col-lg-3  col-md-4 col-sm-6  col-xs-3"></div>
+      <div class="col-lg-3  col-md-4 col-sm-6 col-xs-3"></div>
+      <div class="col-lg-3  col-md-4 col-sm-6 col-xs-3"></div>
+    </div> -->
+
+    <!-- 列的偏移 -->
+    <div class="row">
+      <div class="col-lg-4  "></div>
+      <div class="col-lg-4  "></div>
+      <div class="col-lg-4 "></div>
+      <div class="col-lg-4  col-lg-offset-8"></div>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="./js/jquery.min.js"></script>
+  <!-- bootstrap的js文件 是为了面对常用的效果 ： 轮播图 tab切换
+       但是bootstrap.min.js依赖于jquery
+  -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

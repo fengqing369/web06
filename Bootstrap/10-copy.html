@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- X-UA-Compatible 这是IE8的标识 id=edge  让ie浏览器渲染的时候按照最新的edge浏览器渲染  -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tab切换</title>
+  <!-- 引入bootstrap的css文件 -->
+  <link rel="stylesheet" href="./lib/css/bootstrap.css">
+
+  <!-- 兼容html5 新标签的库-html5shiv.js   让低版本浏览器兼容媒体查询的库-respond.js -->
+  <!-- lt代表less than  小于 ie9  那一行代表的就是ie条件注释语句 之所以要用他是因为 html5新标签和媒体查询 在高级浏览器中不需要兼容的  这样做可以让高级浏览器少两个请求和两个文件  -->
+
+  <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.js"></script> 
+    <![endif]-->
+</head>
+
+<body>
+
+  <div>
+
+    <!-- 标签页的按钮 
+          role="tablist" 意味着 这是一个标签页列表  给阅读器看的
+          role="presentation"  意味着这是比较详细的列表内容  给阅读器看的
+          role="tab"  这是一个标签
+          aria-controls="home"  这是给阅读器看的
+
+           data-toggle="tab" 这是一个自定义属性 这个不能删 因为这个地方就是bootstrap中做tab组件的主要属性
+    -->
+    <ul class="nav nav-tabs">
+
+      <li class="active">
+        <a href="#home"  data-toggle="tab">Home</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#profile" data-toggle="tab">Profile</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#messages" data-toggle="tab">Messages</a>
+      </li>
+
+      <li role="presentation">
+        <a href="#settings"  data-toggle="tab">Settings</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes 
+        role="tabpanel" 意思是  这个是标签页的内容面板
+      -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">1</div>
+      <div class="tab-pane" id="profile">2</div>
+      <div class="tab-pane" id="messages">3.</div>
+      <div class="tab-pane" id="settings">4</div>
+    </div>
+
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <!-- bootstrap的js文件 是为了面对常用的效果 ： 轮播图 tab切换
+       但是bootstrap.min.js依赖于jquery  实际上就是基于jquery的一个插件
+  -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+// 引入变量表
+@import './setting.less';
+// 引入浏览器的默认样式
+@import './reset.less';
+
+// 顶部导航
+.wjs-topnav {
+  width: 100%;
+  height: @topHeight;
+  border-bottom: 1px solid @topBorderColor;
+
+  .topnav-container {
+    width: @smallWidth;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+    border-right: 1px solid @topBorderColor;
+    text-align: center;
+    line-height:  @topHeight;
+    color: @topFontColor;
+  }
+
+  a {
+    color: @topFontColor;
+  }
+
+  a.signup {
+    padding: 5px 10px;
+    background-color: #eb1c2d;
+    color: @white;
+    border-radius: @topRadius;
+  }
+
+  // a.signin {
+  //   font-size: 14px;
+  // }
+
+  li.qrcode {
+    width: @qrcodeWidth;
+  }
+
+  li.server {
+    width: @serviceWidth;
+  }
+
+  li.extra {
+    width: @extraWidth;
+  }
+
+  li.join {
+    width: @joinWidth;
+    border-right: none;
+    font-size: 14px;
+  }
+}
+
+
+// 导航
+.wjs-nav {
+  width: 100%;
+  height: @navHeight;
+  border-bottom: 1px solid @navBorderColor;
+
+  ul {
+    width: @smallWidth;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  li {
+    position: relative;
+    float: left;
+    &:hover a {
+      color: #333;
+    }
+
+    &:hover b {
+      opacity: 1;
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: @navHeight;
+    padding: 0 15px;
+    color: #999;
+  }
+
+  b {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    opacity: 0;
+  }
+
+  img {
+    width: @navImgWidth;
+    margin-top: @navImgTop;
+  }
+  li.center {
+    float: right;
+  }
+
+  
+}
+
+
+// 轮播图
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+
+    > li {
+      float:left;
+      width:100%;
+      position: relative;
+      height: 352px;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+// 专长
+.wjs-expertise {
+  width: @bigWidth;
+  margin:  0 auto;
+  padding: @exPadding;
+  overflow: hidden;
+
+  dl {
+    float: left;
+    width: 33.33333%;
+    padding: @dlPadding;
+  }
+
+  dt {
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: @dtBottom;
+  }
+
+  dd {
+    line-height: 2;
+    font-size: 14px;
+    color: @exColor;
+  }
+
+  span {
+    font-family: @exFontFamily;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+}
+
+// 通知
+.wjs-notify {
+  border-top: 1px solid @notidyBorderColor;
+  border-bottom: 1px solid @notidyBorderColor;
+  padding: @notifyPadding;
+
+  ul {
+    position: relative;
+    width: @bigWidth;
+    margin: 0 auto;
+  }
+
+  li {
+    padding: 0 15px;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  li:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+  .ye {
+    color: @notifyColor;
+  }
+
+  a.ye {
+    border-bottom: 1px dashed  @notifyColor;
+  }
+
+  .bl {
+    color: @notifyqaColor;
+    margin: 0 10px;
+  }
+  img {
+    height: @notifyImgHeight;
+    width: auto;
+  }
+}
+
+// 借贷
+.wjs-loan {
+  width: 100%;
+  background-image: url("../images/box-style-bg.png");
+  padding: 20px 0;
+
+  .loan-wrap {
+    width: @bigWidth;
+    margin: 0 auto;
+  }
+
+  .tabs-wrap {
+    overflow: auto;
+    position: relative;
+  }
+
+  .tabs {
+    // min-width 最小宽度
+    min-width: 570px;
+    height: @tabsHeight;
+    line-height: @tabsLineHeight;
+    border-bottom: 1px solid @tabsBorderColor;
+    padding-left: 15px;
+    li {
+      position: relative;
+      float: left;
+      font-size: 15px;
+      padding: 6px 18px;
+      margin-right: 15px;
+
+      &.active  b{
+        display: block;
+      }
+    }
+
+    b {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: red;
+    }
+  }
+
+  .intro {
+    position: relative;
+    width: 100%;
+    height: @introHeihgt;
+    box-shadow: @introBoxShadow;
+    border-radius: @itemRadius;
+    background-color: @white;
+    margin-top: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50px;
+
+      width: 0;
+      height: 04;
+      // 用css做小三角(没用兼容性的)
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid @white;
+
+      // border-top: 10px solid transparent;
+      // border-bottom: 10px solid transparent;
+      // border-left: 10px solid red;
+    }
+    p {
+      width: 100%;
+      height: 100%;
+      padding-left: 15px;
+      line-height: @introHeihgt;
+      font-size: 14px;
+    }
+  }
+
+  .items {
+    width: 100%;
+    padding-top: 20px;
+    text-align: justify;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    > .blank {
+      display: inline-block;
+      width:  @itemWidth;
+    }
+  }
+
+  .item {
+    display: inline-block;
+    position: relative;
+    width: @itemWidth;
+    height: @itemHeight;
+    padding: @itemPadding;
+    background-color: yellowgreen;
+    margin-bottom: 20px;
+  }
+
+  .item-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    height: 100%;
+    background-color: tomato;
+  }
+  .item-left {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+  }
+}
+
+// 底部
+.footer {
+	margin-top: 30px;
+	text-align: center;
+	clear: both;
+
+	.flink {
+		height: 35px;
+		padding-top: 10px;
+		font-size: 14px;
+		border-top: 1px solid #dedede;
+		position: relative;
+
+		.share {
+			display: inline-block;
+		}
+
+		a {
+			margin: 0 5px;
+			color: #666;
+			display: inline-block;
+		}
+
+		.wechat, .sina, .tqq {
+			width: 25px;
+			height: 24px;
+			vertical-align: middle;
+			background-color: #d0d0d0;
+			border-radius: 24px;
+		}
+	}
+
+	.copyright {
+		background-color: #333;
+		overflow: hidden;
+
+		p {
+			padding: 20px 0;
+			color: #FFF;
+			font-size: 12px;
+			line-height: 1;
+		}
+
+		.authen {
+			margin: 10px 0 30px;
+			
+			img {
+				width: auto;
+				height: 42px;
+				margin: 0 10px;
+			}
+		}
+	}
+}

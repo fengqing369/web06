@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>布局容器</title>
+  <!-- 引入bootstrap的css文件 -->
+  <link rel="stylesheet" href="./lib/css/bootstrap.css">
+
+  <!-- 兼容html5 新标签的库-html5shiv.js   让低版本浏览器兼容媒体查询的库-respond.js -->
+  <!-- lt代表less than  小于 ie9  那一行代表的就是ie条件注释语句 之所以要用他是因为 html5新标签和媒体查询 在高级浏览器中不需要兼容的  这样做可以让高级浏览器少两个请求和两个文件  -->
+
+     <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.js"></script> 
+    <![endif]-->
+  <style>
+    header {
+      background-color: tomato;
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- 布局容器: 
+      container 具有固定宽度的布局容器
+      
+      container-fluid  没有固定宽度  就是100%
+    -->
+
+    <div class="container">
+      container
+    </div>
+    <div class="container-fluid">
+        container-fluid
+    </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <!-- bootstrap的js文件 是为了面对常用的效果 ： 轮播图 tab切换
+       但是bootstrap.min.js依赖于jquery
+  -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

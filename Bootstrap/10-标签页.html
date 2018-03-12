@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>基本模板</title>
+  <!-- 引入bootstrap的css文件 -->
+  <link rel="stylesheet" href="./lib/css/bootstrap.css">
+
+  <!-- 兼容html5 新标签的库-html5shiv.js   让低版本浏览器兼容媒体查询的库-respond.js -->
+  <!-- lt代表less than  小于 ie9  那一行代表的就是ie条件注释语句 之所以要用他是因为 html5新标签和媒体查询 在高级浏览器中不需要兼容的  这样做可以让高级浏览器少两个请求和两个文件  -->
+
+     <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.js"></script> 
+    <![endif]-->
+  <style>
+    header {
+      background-color: tomato;
+    }
+  </style>
+</head>
+
+<body>
+
+    <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" >
+          <li  class="active"><a href="#home"   data-toggle="tab">Home</a></li>
+          <li ><a href="#profile"   data-toggle="tab">Profile</a></li>
+          <li ><a href="#messages"   data-toggle="tab">Messages</a></li>
+          <li ><a href="#settings"  data-toggle="tab">Settings</a></li>
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">1</div>
+          <div  class="tab-pane" id="profile">2</div>
+          <div  class="tab-pane" id="messages">3</div>
+          <div  class="tab-pane" id="settings">4</div>
+        </div>
+      
+      </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <!-- bootstrap的js文件 是为了面对常用的效果 ： 轮播图 tab切换
+       但是bootstrap.min.js依赖于jquery
+  -->
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>
